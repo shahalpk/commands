@@ -14,3 +14,10 @@ To force recreate a container and start in daemon mode.
 To start already built containers.
 
     docker-compose -f compose-db.yml start
+
+
+## Logs
+
+To tail (with last 10 lines) logs of all the containers in a compose file.
+
+    docker-compose logs -f --tail=10
