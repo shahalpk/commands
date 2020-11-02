@@ -18,6 +18,10 @@ To start already built containers.
 
 ## Logs
 
-To tail (with last 10 lines) logs of all the containers in a compose file.
+To tail and stream (with last 10 lines) logs of all the containers in `compose-db.yml` file. Note the `-f` flag in two places, both have different meanings. One is after the `logs` keyword, it's for streaming the file.
+
+    docker-compose -f compose-db.yml logs -f --tail=10
+
+To tail (with last 10 lines) logs of all the containers in the default compose file (`docker-compose.yml`).
 
     docker-compose logs -f --tail=10
